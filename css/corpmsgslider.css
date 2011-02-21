@@ -1,0 +1,8 @@
+.cpmsl{position:relative;}
+.cpmsl-btn{background-color:rgb(200, 200, 200);background-color:rgba(255, 255, 255, 0.5);color:#fff;display:inline-block;padding:2px 2px 2px 2px;cursor:pointer;text-align:center;}
+.cpmsl-btn-active{color:#aa0007;cursor:default;}
+.cpmsl-menu{background-color:rgb(0, 0, 0);bottom:0;position:absolute;right:0;right:0;text-align:right;z-index:100;}
+.cpmsl-slide{background-repeat:no-repeat;left:0;position:absolute;top:0;vertical-align:middle;}
+.cpmsl-slide-caption{position:relative;text-align:center;top:-50%;}
+.cpmsl-slide-caption{cursor:default;}
+.cpmsl-slide-placer{position:absolute;top:50%;width:100%;}

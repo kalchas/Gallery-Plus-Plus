@@ -1,0 +1,5 @@
+.clearfix{clear:both;}
+.ns-colorpicker,.ns-colorpicker span{background:url(../images/select.png) no-repeat 0 0;display:inline-block;height:36px;position:relative;vertical-align:middle;width:36px;}
+.ns-colorpicker span{background-position:50% 50%;height:30px;left:3px;position:absolute;top:3px;width:30px;}
+.colorpicker input[type=text]{background-color:transparent;border-color:transparent;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;}
+#nsgallery-trash{background:url(images/trashcan.gif) no-repeat 0 0;height:51px;width:30px;}
