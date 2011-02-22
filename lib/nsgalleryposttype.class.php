@@ -235,13 +235,13 @@ class NSGalleryPostType extends NSCustomPostType {
 					<span id="${colorpickerID}" class="ns-colorpicker">
 						<span></span>
 					</span>
-					<input id="${colorpickerID}-input" name="bgcolor" type="hidden" value="${bgcolor}"
+					<input id="${colorpickerID}-input" name="bgcolor" type="hidden" value="${bgcolor}" />
 				</td>
 				<td style="text-align:center;vertical-align:middle;">
 					<span id="${fontcolorpickerID}" class="ns-colorpicker">
 						<span></span>
 					</span>
-					<input id="${fontcolorpickerID}-input" name="color" type="hidden" value="${bgcolor}"
+					<input id="${fontcolorpickerID}-input" name="color" type="hidden" value="${bgcolor}" />
 				</td>
 			</tr>
 			
@@ -327,12 +327,30 @@ class NSGalleryPostType extends NSCustomPostType {
 				$('#ns-image-upload').wpmediabox({
 					
 					"callback" : function (html) {
-					
+						
+						var 
+						
+							caption = '',
+							captionify = html.replace('[', '<'),
+							img = $('img', html).attr('src')
+						
+						;
+						
+						captionify = captionify.replace(']', '>');
+						
+						caption = $(captionify).attr('caption');
+						
+						caption = (!caption) ? '' : caption;
+						
+						img = (!img) ? $(html).attr('src') : img;
+
 						gallery_list.galleryslidesorter('add_slide', {
 						
+							"caption" : caption,
+							"link" : $(html).attr('href'),
 							"url" : window.location,
 							"ns-action" : "fetch-id-and-thumb",
-							"img" : $(html).attr('href'),
+							"img" : img,
 							"nsgalleryposttype" : "<?php echo wp_create_nonce(__FILE__); ?>",
 							"template" : $('#gallery-image')
 						

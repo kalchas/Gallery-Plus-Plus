@@ -78,7 +78,11 @@ class NSGallery {
 
 				$slides[$key]->img = $images[0];
 				
-				$slides[$key]->url = $value->link;
+				if (isset($value->link)) {
+				
+					$slides[$key]->url = $value->link;
+					
+				}
 				
 			}
 			

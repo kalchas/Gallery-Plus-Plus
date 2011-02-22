@@ -175,6 +175,10 @@
 						
 						ID : JSON.stringify({'ID' : d.ID}),
 						
+						caption : params.caption,
+						
+						link : params.link,
+						
 						thumb : d.thumb,
 						
 						colorpickerID : 'nsslide-' + data.items_added,
@@ -210,15 +214,17 @@
 					
 					$that.parent().parent().data('nsslide', $.extend(true, old_data, new_data));
 					
-					$this.trigger('sortupdate');
-					
 				});
 				
 				$this.galleryslidesorter('set_element_data', data);
 				
 				new_item.appendTo($this);
 				
+				$('input', new_item).trigger('change');
+				
 				$this.applycolorpicker();
+				
+				$this.trigger('sortupdate');
 				
 			},
 			
