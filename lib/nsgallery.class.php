@@ -68,7 +68,7 @@ class NSGallery {
 
 			$width = $width - ($width * $caption_width);
 			
-			add_image_size('nsgpp-' . $this->ID, $width, $this->height * 2000, false);
+			add_image_size('nsgpp-' . $this->ID, $width, $this->height * 2, true);
 			
 			$slides = json_decode($this->slides);
 			
@@ -77,6 +77,8 @@ class NSGallery {
 				$images = wp_get_attachment_image_src($value->ID, 'nsgpp-' . $this->ID);
 
 				$slides[$key]->img = $images[0];
+				
+				$slides[$key]->url = $value->link;
 				
 			}
 			

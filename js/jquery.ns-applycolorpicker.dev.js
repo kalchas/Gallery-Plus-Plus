@@ -31,13 +31,11 @@
 			
 			start_color = ('#' === start_color) ? $('span:first-child', e).css('background-color') : start_color;
 			
-			start_color = ('transparent' == start_color) ? opts.default_color : start_color;
-			
-			
+			start_color = ('transparent' === start_color || 'rgba(0, 0, 0, 0)' === start_color) ? opts.default_color : start_color;
 			
 			$('span:first-child', e).css('background-color', start_color);
 			
-			$('#' + $(e).attr('id') + opts.input_suffix).attr('value', start_color.replace('#', ''));
+			$('#' + $(e).attr('id') + opts.input_suffix).attr('value', start_color.replace('#', '')).trigger('change');
 		
 			$(e).ColorPicker({
 

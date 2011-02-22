@@ -123,6 +123,7 @@
 				}, function (d) {
 					
 					$this.galleryslidesorter('slide_factory', d, params);
+					$this.trigger('sortupdate');
 					
 				});
 				
@@ -218,8 +219,6 @@
 				new_item.appendTo($this);
 				
 				$this.applycolorpicker();
-				
-				$this.trigger('sortupdate');
 				
 			},
 			

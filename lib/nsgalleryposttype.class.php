@@ -241,7 +241,7 @@ class NSGalleryPostType extends NSCustomPostType {
 					<span id="${fontcolorpickerID}" class="ns-colorpicker">
 						<span></span>
 					</span>
-					<input id="${fontcolorpickerID}-input" name="bgcolor" type="hidden" value="${bgcolor}"
+					<input id="${fontcolorpickerID}-input" name="color" type="hidden" value="${bgcolor}"
 				</td>
 			</tr>
 			

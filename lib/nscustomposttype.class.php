@@ -51,7 +51,7 @@ class NSCustomPostType {
 	
 	public function save_meta_box($post_id) {
 		
-		if (! wp_verify_nonce($_POST[$this->post_type_name]['meta-box-nonce'], __FILE__)) {
+		if (!isset($_POST[$this->post_type_name]) || !wp_verify_nonce($_POST[$this->post_type_name]['meta-box-nonce'], __FILE__)) {
 			
 			return $post_id;
 			
